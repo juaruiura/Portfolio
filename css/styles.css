@@ -127,6 +127,48 @@ h2 {
     width: 500px;
 }
 
+.experience-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.experience {
+    margin: 10px;
+    width: 480px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    background-color: #e8f4fc;
+}
+
+.experience-detail {
+    margin: 20px 40px;
+    margin-top: -40px;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    text-align: center;
+}
+
+.experience-description {
+    text-align: left;
+}
+
+.experience-url {
+    border: 1px solid;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #056fff;
+    border-radius: 5px;
+}
+
+.experience img {
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 .footer {
     color: white;
     background-color: #1b2127;
