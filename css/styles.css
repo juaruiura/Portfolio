@@ -23,7 +23,7 @@ h1 {
     line-height: 1.5;
     letter-spacing: -.2px;
     color: white;
-    margin: 100px 520px 70px 30px;
+    margin: 0;
 }
 
 h1 strong {
@@ -33,9 +33,10 @@ h1 strong {
 .header {
     background-color: #1b2127;
     color: white;
+    height: 70px;
     display: flex;
     justify-content: space-between;
-    height: 90px;
+    align-items: center;
 }
 
 .menu { /* .menu hereda de .header */
@@ -71,6 +72,8 @@ h1 strong {
     background-repeat: no-repeat;
     background-position-x: right;
     background-color: #1b2127;
+    display: flex;
+    align-items: center;
 }
 
 .portfolio {
@@ -92,4 +95,20 @@ h1 strong {
 
 .project-imageContainer {
     width: 500px;
+}
+
+.footer {
+    color: white;
+    background-color: #1b2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer img {
+    vertical-align: middle;
+}
+
+.footer a {
+    color: white;
 }
