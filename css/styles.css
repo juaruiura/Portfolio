@@ -48,6 +48,11 @@ h2 {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .menu { /* .menu hereda de .header */
     height: inherit;
 }
