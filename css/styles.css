@@ -52,6 +52,7 @@ h2 {
 .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .menu { /* .menu hereda de .header */
@@ -268,6 +269,7 @@ h2 {
 
 .container {
     max-width: 1000px;
+    flex: 1;
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
@@ -281,7 +283,27 @@ h2 {
 @media screen and (max-width: 1024px) {
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+    .header {
+        display: block;
+        height: auto;
+    }
+    
+    .header ol {
+        display: initial;
+    }
+    
+    .header ol li{
+        height: 50px;
+    }
+    
+    .header a {
+        justify-content: center;
+    }
+
+    .logo {
+        padding-top: 10px;
+    }
 }
 
 @media screen and (max-width: 480px) {
