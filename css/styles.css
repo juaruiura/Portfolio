@@ -95,7 +95,7 @@ h2 {
 }
 
 .portfolio {
-    background: #fafafa;
+    background: #f0f0f0;
     padding: 20px;
 }
 
@@ -141,19 +141,20 @@ h2 {
     max-width: 100%;
 }
 
+.experiences {
+    background: #ffffff;
+    padding: 20px;
+}
+ 
 .experience-list {
     display: flex;
     overflow: hidden;
     flex-wrap: wrap;
 }
 
-.experience-title {
-    margin: 40px 0px;
-}
-
 .experience {
-    margin: 10px;
-    width: 480px;
+    margin: 1%;
+    width: 48%;
     border-radius: 10px;
     flex-shrink: 0;
     background-color: #e8f4fc;
@@ -181,7 +182,7 @@ h2 {
 }
 
 .experience img {
-    width: 480px;
+    width: 100%;
     height: 200px;
     object-fit: cover;
     border-top-left-radius: 10px;
@@ -345,13 +346,31 @@ h2 {
     }
 
     .project-description {
-        font-size: .8em;
+        font-size: 1em;
+    }
+
+    .experience {
+        width: auto;
+        flex-shrink: initial;
+    }
+
+    .portfolio div h2, .experience-title {
+        margin: 10px 0 30px;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .portfolio div h2, .experience-title {
+        margin: 0 0 20px;
+    }
+
     .project-details {
         font-size: 12px;
+    }
+
+    .experience-detail {
+        margin: -2em .5em .5em;
+        padding: 1em;
     }
 }
 
