@@ -397,6 +397,10 @@ h2 {
         font-size: 12px;
     }
 
+    #experiencia {
+        margin: 1.5em 0;
+    }
+
     .experience-detail {
         margin: -2em .5em .5em;
         padding: 1em;
@@ -432,5 +436,9 @@ h2 {
 
     .hero {
         padding: 2em 1em;
+    }
+
+    .social-link {
+        margin: 10px 20px;
     }
 }
