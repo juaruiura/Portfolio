@@ -24,6 +24,7 @@ h1 {
     letter-spacing: -.2px;
     color: white;
     margin: 0;
+    text-shadow: 1px 2px 2px #000;
 }
 
 h1 strong {
@@ -37,6 +38,53 @@ h2 {
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 40px;
+}
+
+/* IcoMoon fonts */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?y0x07p');
+    src:  url('../fonts/icomoon.eot?y0x07p#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?y0x07p') format('truetype'),
+      url('../fonts/icomoon.woff?y0x07p') format('woff'),
+      url('../fonts/icomoon.svg?y0x07p#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+  
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+.icon-menu:before {
+    content: "\e900";
+}
+
+.burger-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .8);
+    left: 10px;
+    top: 10px;
+    display: none;
+    line-height: 50px;
+    text-align: center;
+    position: fixed;
+    z-index: 4;
+    color: white;
 }
 
 .header {
@@ -308,7 +356,6 @@ h2 {
     h1 {
         font-size: 2em;
         z-index: 2;
-        text-shadow: 1px 2px 2px #000;
     }
 
     .container {
@@ -317,6 +364,14 @@ h2 {
 }
 
 @media screen and (max-width: 767px) {
+    .burger-button {
+        display: block;
+    }
+
+    .logo {
+        padding: 10px 0;
+    }
+
     .header {
         display: block;
         height: auto;
@@ -324,6 +379,7 @@ h2 {
     
     .header ol {
         display: initial;
+        flex-grow: 1;
     }
     
     .header ol li{
@@ -332,10 +388,32 @@ h2 {
     
     .header a {
         justify-content: center;
+        border-top: white solid 1px;
+        border-bottom: white solid 1px;
+        text-shadow: 2px 2px 4px #000000;
+        box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), inset 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 1.5em 0;
+        height: 60px;
+        font-size: 1.3em;
+        width: 99%;
     }
 
-    .logo {
-        padding-top: 10px;
+    .menu {
+        position: fixed;
+        background: rgba(5, 111, 255, .9);
+        z-index: 3;
+        top: 0;
+        left: -104vw;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        transition: .3s;
+    }
+
+    .menu.is-active {
+        left: 0;
     }
 
     .project {
