@@ -364,6 +364,10 @@ h2 {
 }
 
 @media screen and (max-width: 767px) {
+    h2 {
+        font-size: 1.4em;
+    }
+
     .burger-button {
         display: block;
     }
@@ -475,7 +479,7 @@ h2 {
     }
 
     .project-details {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     #experiencia {
@@ -513,6 +517,10 @@ h2 {
 @media screen and (max-width: 320px) {
     h1 {
         font-size: 1.2em;
+    }
+
+    .menu {
+        left: -106vw;
     }
 
     .hero {
