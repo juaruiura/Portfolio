@@ -152,6 +152,7 @@ h2 {
     background: #f0f0f0;
     display: grid;
     grid-template-columns: 1fr 1000px 1fr;
+    padding: 20px;
 }
 
 .portfolio-header {
@@ -350,6 +351,12 @@ h2 {
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {
+    .header {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+
     .hero {
         display: flex;
         height: auto;
@@ -493,6 +500,11 @@ h2 {
         flex-shrink: initial;
     }
 
+    .experience-detail {
+        margin: -2em .5em .5em;
+        padding: 1em;
+    }
+
     .portfolio div h2, .experience-title {
         margin: 10px 0 30px;
     }
@@ -503,6 +515,10 @@ h2 {
         font-size: 1.5em;
     }
 
+    .menu {
+        left: -106vw;
+    }
+
     .portfolio div h2, .experience-title {
         margin: 0 0 20px;
     }
@@ -511,13 +527,12 @@ h2 {
         font-size: 14px;
     }
 
-    #experiencia {
-        margin: 1.5em 0;
+    .experience-list {
+        grid-template-columns: 1fr;
     }
 
-    .experience-detail {
-        margin: -2em .5em .5em;
-        padding: 1em;
+    #experiencia {
+        margin: 1.5em 0;
     }
 
     .contact {
@@ -546,10 +561,6 @@ h2 {
 @media screen and (max-width: 320px) {
     h1 {
         font-size: 1.2em;
-    }
-
-    .menu {
-        left: -106vw;
     }
 
     .hero {
