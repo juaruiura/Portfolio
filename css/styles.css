@@ -94,7 +94,6 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 680px 320px 1fr;
     grid-template-areas: ". logo menu .";
-    /* justify-content: space-between; */
     /* align-items: center; */
     flex-wrap: wrap;
 }
@@ -153,26 +152,29 @@ h2 {
 .portfolio {
     background: #f0f0f0;
     padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1000px 1fr;
+}
+
+.portfolio-header {
+    grid-column-start: 2;
 }
 
 .project {
+    grid-column-start: 2;
     border: 1px solid gray;
     border-radius: 10px;
     margin-bottom: 15px;
     padding: 20px;
     background: white;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .project strong {
     font-family: 'Fjalla One', sans-serif;
-}
-
-.project-details {
-    width: 50%;
 }
 
 .project-title {
@@ -187,10 +189,6 @@ h2 {
 
 .project-description {
     font-size: 20px;
-}
-
-.project-imageContainer {
-    width: 50%;
 }
 
 .project-imageContainer img {
@@ -361,6 +359,10 @@ h2 {
         top: 0;
         bottom: 0;
         width: 100%;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr;
     }
 
     h1 {
