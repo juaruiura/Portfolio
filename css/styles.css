@@ -37,7 +37,6 @@ h2 {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     font-size: 24px;
-    margin-bottom: 40px;
 }
 
 /* IcoMoon fonts */
@@ -151,7 +150,6 @@ h2 {
 
 .portfolio {
     background: #f0f0f0;
-    padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1000px 1fr;
 }
@@ -195,26 +193,35 @@ h2 {
     max-width: 100%;
 }
 
+.my-experience {
+    display: grid;
+    grid-template-columns: 1fr 1000px 1fr;
+}
+
+.experience-title {
+    grid-column-start: 2;
+}
+
+.experience-list {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+    margin-bottom: 2%;
+}
+
+.experience {
+    border-radius: 10px;
+    flex-shrink: 0;
+    background-color: #e8f4fc;
+}
+
 .youtube-video {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-}
- 
-.experience-list {
-    display: flex;
-    overflow: hidden;
-    flex-wrap: wrap;
-}
-
-.experience {
-    margin: 1%;
-    width: 48%;
-    border-radius: 10px;
-    flex-shrink: 0;
-    background-color: #e8f4fc;
 }
 
 .experience-detail {
@@ -363,6 +370,15 @@ h2 {
 
     .portfolio {
         grid-template-columns: 1fr;
+    }
+    
+    .my-experience {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .experience-list {
+
     }
 
     h1 {
