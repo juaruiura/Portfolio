@@ -91,20 +91,23 @@ h2 {
     background-color: #1b2127;
     color: white;
     height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 680px 320px 1fr;
+    grid-template-areas: ". logo menu .";
+    /* justify-content: space-between; */
+    /* align-items: center; */
     flex-wrap: wrap;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    grid-area: logo;
 }
 
 .menu { /* .menu hereda de .header */
     height: inherit;
+    grid-area: menu;
 }
   
 .header ol { /* .header ol hereda de .menu */
@@ -132,13 +135,19 @@ h2 {
 .hero {
     height: 300px;
     background-color: #1b2127;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-areas: ". hero-text hero-image .";
     align-items: center;
-    justify-content: space-between;
+}
+
+.hero-text {
+    grid-area: hero-text;
 }
 
 .hero-image {
     object-fit: cover;
+    grid-area: hero-image;
 }
 
 .portfolio {
@@ -337,6 +346,7 @@ h2 {
 
 @media screen and (max-width: 1024px) {
     .hero {
+        display: flex;
         height: auto;
         position: relative;
         overflow: hidden;
@@ -374,6 +384,7 @@ h2 {
 
     .logo {
         padding: 10px 0;
+        justify-content: center;
     }
 
     .header {
